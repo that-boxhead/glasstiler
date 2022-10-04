@@ -1,12 +1,9 @@
 #!/usr/bin/env python
-#
 
-# import modules used here -- sys is a very standard one
 import sys, argparse, logging
 import cv2 as cv
 import numpy as np
 
-# Gather our code in a main() function
 def main(args, loglevel):
   logging.basicConfig(format="%(levelname)s: %(message)s", level=loglevel)
  
@@ -54,14 +51,11 @@ def main(args, loglevel):
   logging.info("Writing to file...")
   cv.imwrite(args.imageout,tiled)
  
-# Standard boilerplate to call the main() function to begin
-# the program.
 if __name__ == '__main__':
   parser = argparse.ArgumentParser( 
                                     description = "Tiles an image horizontally with flipped and frosted-glass-blurred copies of the image to fit a specified aspect ratio.",
                                     epilog = "As an alternative to the commandline, params can be placed in a file, one per line, and specified on the commandline like '%(prog)s @params.conf'.",
                                     fromfile_prefix_chars = '@' )
-  # TODO Specify your real parameters here.
   parser.add_argument(
                       "image",
                       help = "image file for tiling",
@@ -84,7 +78,6 @@ if __name__ == '__main__':
                       default=1.5)
   args = parser.parse_args()
   
-  # Setup logging
   if args.verbose:
     loglevel = logging.DEBUG
   else:
