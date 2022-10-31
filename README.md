@@ -10,8 +10,8 @@ The image below, generated with [craiyon](https://www.craiyon.com/), has been pr
 Script currently under development under the **dev** branch.
 ## Usage
 
-positional arguments:
 ```
+positional arguments:
   IMAGE                 image file for tiling
   IMAGEOUT              output image file target
 
