@@ -10,4 +10,19 @@ The image below, generated with [craiyon](https://www.craiyon.com/), has been pr
 Script currently under development under the **dev** branch.
 ## Usage
 
-Write usage here
+positional arguments:
+  IMAGE                 image file for tiling
+  IMAGEOUT              output image file target
+
+options:
+  -h, --help            show this help message and exit
+  -v, --verbose         increase output verbosity
+  -r RATIO, --ratio RATIO
+                        target aspect ratio for tiling
+
+As an alternative to the commandline, params can be placed in a file, one per line, and specified on the commandline like 'glasstiler.py @params.conf'.
+
+## Example
+Runs the script in verbose mode, tiles the image to a 1.7 aspect ratio.
+
+`./glasstiler.py -v -r 1.7 /path/to/my/image.jpg /path/to/my/newimage.jpg`
