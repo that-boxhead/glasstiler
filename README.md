@@ -11,6 +11,7 @@ Script currently under development under the **dev** branch.
 ## Usage
 
 positional arguments:
+```
   IMAGE                 image file for tiling
   IMAGEOUT              output image file target
 
@@ -21,6 +22,7 @@ options:
                         target aspect ratio for tiling
 
 As an alternative to the commandline, params can be placed in a file, one per line, and specified on the commandline like 'glasstiler.py @params.conf'.
+```
 
 ## Example
 Runs the script in verbose mode, tiles the image to a 1.7 aspect ratio.
